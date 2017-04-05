@@ -375,10 +375,90 @@
 		default:
 			document.write(myColor + ' is not my favorite color!');
 	}
+	 document.write("<hr>");
 
 
+	//this is a function
+	function playFunc(){
+		var jim = 100;
+		var joe = 1;
+		document.write('lets add things together: ');
+		document.write(jim + joe);
 
+	};
 
+	playFunc ();
+	document.write("<hr>");
+
+	function sum10(n1,n2) {
+		return (n1 + n2) * 10;
+	};
+
+	document.write(sum10(5,5));
+	document.write("<hr>");
+
+	//function expression
+	exFunc = function(p1){
+		document.write(p1 * 10);
+
+	}; 
+
+	exFunc(2);
+	document.write("<hr>");
+
+	//self envoked function - runs without being called
+	(function (){
+		document.write('this executed without a call');
+	})();
+
+	//this refers to an instance
+	function myFunction(){
+		return this;
+	};
+
+	console.log(myFunction());
+
+	//Loops
+	document.write("<hr>");
+	document.write('<b>loops execute a set amount of times</b>');
+
+	//for loops
+	for(var i = 0; i < 10; ++i){
+		document.write(i + '<br>');
+	};
+
+	beers=['corona', 'modelo', 'heineken', 'bud'];
+	for(var i = 0; i < beers.length; i ++){
+		document.write(i + ': ' + beers[i] + '<br>');
+	};
+
+	//while loop
+	var bi = 0;
+	while(bi < beers.length){
+		document.write(bi + ': ' + beers[bi] + '<br>');
+		++bi;
+	};
+
+	//do while loop
+	var bidx=0;
+	do{
+		document.write(bidx + ': ' + beers[bidx] + '<br>');
+		++bidx;
+	} while (bidx < beers.length);
+
+	//for/in loop
+	person = {
+		fname:'john',
+		lname: 'doe',
+		id: 1234
+	};
+
+	document.write('for in loop example');
+	objKeyVal ='';
+	for(key in person) {
+		objKeyVal += person[key] + ' ';
+		document.write('<p>' + objKeyVal + '</p>');
+	};
 
 
 </script>
